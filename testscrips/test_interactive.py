@@ -73,5 +73,6 @@ class Testinteractive:
         }
         logger.info("查询条件为：")
         logger.info(str(data_dic))
+        logger.info("测试代码后续删除")
         count_actual = data_filter_count(data_dic)
         assert count_actual == count
