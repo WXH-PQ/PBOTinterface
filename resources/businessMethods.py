@@ -28,7 +28,7 @@ def deal_datafilter(case,UUID):
                 data_dic[key] = case[key]
         elif key == 'call_id' and case[key] != '':
             if case['new|old'] == 'new':
-                conditions[key] = case[key] + '_' + UUID
+                conditions[key] = case[key] + '-' + UUID
             else:
                 conditions[key] = case[key]
         elif key == 'call_time_start':
@@ -42,7 +42,7 @@ def deal_datafilter(case,UUID):
                 end = date_format('day') + ' 23:59:59'
                 conditions['call_time_end'] = end
             else:
-                conditions['call_time_start'] = case[key]
+                conditions['call_time_end'] = case[key]
         elif case[key] != '' and 'R_' not in key and key != 'new|old':
             conditions[key] = case[key]
     data_dic['conditions'] = conditions

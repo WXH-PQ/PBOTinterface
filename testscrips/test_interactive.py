@@ -60,7 +60,7 @@ class Testinteractive:
 
     @allure.title("通话交互入库数量正常")
     @pytest.mark.flaky(reruns=4, reruns_delay=10)
-    @pytest.mark.parametrize('count', [13])
+    @pytest.mark.parametrize('count', [41])
     def test_002(self,t_start,count):
         logger.info("通话交互入库数量测试开始")
         end_time = date_format('now-1')
